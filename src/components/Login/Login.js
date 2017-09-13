@@ -1,12 +1,12 @@
 import React, { PureComponent } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, KeyboardAvoidingView } from "react-native";
 
 import LoginForm from './LoginForm'
 
 export default class Welcome extends PureComponent {
   render() {
     return (
-        <View style={styles.container}>
+       <KeyboardAvoidingView behaviour="padding" style={ styles.container }>
             <View style={ styles.logoContainer }>
                 <Image 
                     style={ styles.logo }
@@ -17,7 +17,7 @@ export default class Welcome extends PureComponent {
             <View style={ styles.formContainer }>
                 <LoginForm />
             </View>
-        </View>
+        </KeyboardAvoidingView>
     )
   }
 }
