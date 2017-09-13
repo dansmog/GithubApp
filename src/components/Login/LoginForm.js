@@ -9,12 +9,14 @@ export default class LoginForm extends PureComponent {
                     style={ styles.input }
                     placeholder="username or email"
                     placeholderTextColor="rgba(255,255,255,0.7)"
+                    returnKeyType="next"
                 />
                 <TextInput 
                     style={ styles.input }
                     placeholder="password"
                     secureTextEntry
-                    placeholderTextColor="rgba(255,255,255,0.7)"                    
+                    placeholderTextColor="rgba(255,255,255,0.7)"  
+                    returnKeyType="go"                  
                 />
                 <TouchableOpacity style={ styles.buttonContainer }>
                     <Text style={ styles.buttonText }>Login</Text>
