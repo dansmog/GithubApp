@@ -2,6 +2,10 @@ import React, { PureComponent } from 'react'
 import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native'
 
 export default class LoginForm extends PureComponent {
+
+    _handleLogin() {
+        alert(" Login successful ")
+    }
     render(){
         return (
             <View style={ styles.container }>
@@ -18,7 +22,10 @@ export default class LoginForm extends PureComponent {
                     placeholderTextColor="rgba(255,255,255,0.7)"  
                     returnKeyType="go"                  
                 />
-                <TouchableOpacity style={ styles.buttonContainer }>
+                <TouchableOpacity 
+                    style={ styles.buttonContainer }
+                    onPress={ this._handleLogin } 
+                >
                     <Text style={ styles.buttonText }>Login</Text>
                 </TouchableOpacity>
             </View>
