@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     },
     subtitle: {
         color: 'white',
-        fontWeight: '200'
+        fontWeight: '200',
+        paddingBottom: 20,
     },
     titleWrapper: {
         justifyContent: 'center',
