@@ -1,13 +1,20 @@
 import React, { PureComponent } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 export default class Welcome extends PureComponent {
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={ styles.wrapper }>
           <View style={ styles.titleWrapper }>
             <Text style={ styles.title }>Github App</Text>
           </View>
+          <TouchableOpacity 
+            style={ styles.githubButton }
+            onPress={ () => navigate('Login') } 
+            >
+            <Text style={ styles.buttonText }>Lets Do this</Text>
+          </TouchableOpacity>
         <Text style={ styles.subtitle }>Powered By React Native</Text>
       </View>
     );
@@ -16,7 +23,7 @@ export default class Welcome extends PureComponent {
 
 const styles = StyleSheet.create({
     wrapper: {
-        backgroundColor: '#27ae60',
+        backgroundColor: '#3498db',
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -34,5 +41,17 @@ const styles = StyleSheet.create({
     titleWrapper: {
         justifyContent: 'center',
         flex: 1
+    },
+    buttonText: {
+        textAlign: 'center',
+        color: '#fff',
+        fontWeight: '700'
+    },
+    githubButton: {
+        backgroundColor: '#27ae60',
+        paddingVertical: 15,
+        width: '80%',
+        marginBottom: 20
     }
+
 })

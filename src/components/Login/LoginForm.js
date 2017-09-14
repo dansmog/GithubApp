@@ -20,7 +20,9 @@ export default class LoginForm extends PureComponent {
                     onSubmitEditing={ () => this.passwordInput.focus() }
                     keyboardType="email-address"
                     autoCapitalize="none"
+                    ref={ username => this.emailInput = username }
                     autoCorrect={false}
+                    underlineColorAndroid="transparent"
                 />
                 <TextInput 
                     style={ styles.input }
@@ -28,7 +30,8 @@ export default class LoginForm extends PureComponent {
                     secureTextEntry
                     placeholderTextColor="#3498db"  
                     returnKeyType="go"
-                    ref={ input => this.passwordInput = input }                  
+                    ref={ pass => this.passwordInput = pass }  
+                    underlineColorAndroid="transparent"                
                 />
                 <TouchableOpacity 
                     style={ styles.buttonContainer }
@@ -53,7 +56,6 @@ const styles = StyleSheet.create({
         padding: 20
     },
     input: {
-        height: 40,
         backgroundColor: 'rgba(255,255,255, 1)',
         marginBottom:10,
         color: '#3498db',
