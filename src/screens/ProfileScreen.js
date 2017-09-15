@@ -1,22 +1,15 @@
 import React, { PureComponent } from "react";
-import { View, Text, StyleSheet, Image, KeyboardAvoidingView, StatusBar } from "react-native";
+import { View, Text, StyleSheet, KeyboardAvoidingView, StatusBar } from "react-native";
 
-import LoginForm from '../components/Login/LoginForm'
 
-export default class LoginScreen extends PureComponent {
+export default class ProfileScreen extends PureComponent {
   render() {
-    console.log(this.props.navigation.navigate)
     return (
        <KeyboardAvoidingView behaviour="padding" style={ styles.container }>
             <View style={ styles.logoContainer }>
-                <Image 
-                    style={ styles.logo }
-                    source={require('../assets/images/octocat100.png')}
-                />
                 <Text style={ styles.title }>An app made for Github</Text>
             </View>
             <View style={ styles.formContainer }>
-                <LoginForm navigate={ this.props.navigation.navigate }/>
             </View>
         </KeyboardAvoidingView>
     )

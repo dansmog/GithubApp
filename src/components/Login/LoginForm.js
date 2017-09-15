@@ -2,11 +2,8 @@ import React, { PureComponent } from 'react'
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, StatusBar } from 'react-native'
 
 export default class LoginForm extends PureComponent {
-
-    _handleLogin() {
-        alert(" Login successful ")
-    }
     render(){
+        console.log(this.props.navigate)
         return (
             <View style={ styles.container }>
                 <StatusBar
@@ -35,14 +32,14 @@ export default class LoginForm extends PureComponent {
                 />
                 <TouchableOpacity 
                     style={ styles.buttonContainer }
-                    onPress={ this._handleLogin } 
+                    onPress={ () => this.props.navigate('Profile')  } 
                 >
                     <Text style={ styles.buttonText }>Login</Text>
                 </TouchableOpacity>
                 <Text style={{ textAlign: 'center', color: '#fff', marginTop: 10 }}>OR</Text>
                 <TouchableOpacity 
                     style={ styles.githubButton }
-                    onPress={ this._handleLogin } 
+                    onPress={ () => this.props.navigate('Profile') } 
                 >
                     <Text style={ styles.buttonText }>Login with Github</Text>
                 </TouchableOpacity>
