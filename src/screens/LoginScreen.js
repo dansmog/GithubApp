@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { View, Text, StyleSheet, Image, KeyboardAvoidingView } from "react-native";
+import { View, Text, StyleSheet, Image, KeyboardAvoidingView, StatusBar } from "react-native";
 
 import LoginForm from '../components/Login/LoginForm'
 

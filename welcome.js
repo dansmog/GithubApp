@@ -1,11 +1,15 @@
 import React, { PureComponent } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, StatusBar } from "react-native";
 
 export default class Welcome extends PureComponent {
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={ styles.wrapper }>
+          <StatusBar
+            backgroundColor="#3498db"
+            barStyle="default"
+          />
           <View style={ styles.titleWrapper }>
             <Text style={ styles.title }>Github App</Text>
           </View>
