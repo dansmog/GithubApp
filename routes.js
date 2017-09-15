@@ -3,7 +3,10 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import Welcome from './welcome';
 import LoginScreen from './src/screens/LoginScreen';
-import ProfileScreen from './src/screens/ProfileScreen';
+import DashboardScreen from './src/screens/DashboardScreen';
+
+
+
 
 
 const App = StackNavigator({
@@ -20,7 +23,7 @@ const App = StackNavigator({
         }
     },
     Profile: {
-        screen: ProfileScreen,
+        screen: DashboardScreen,
         navigationOptions: {
             header: null
         }
