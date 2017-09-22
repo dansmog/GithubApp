@@ -27,7 +27,7 @@ const App = StackNavigator({
         navigationOptions: {
             header: null
         }
-    }
+    },
 })
 
 
