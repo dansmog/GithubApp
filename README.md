@@ -4,7 +4,7 @@
 <img src="./githubapp-dashboard.png" width="30%" alt="empty screen todo list"/>
 </p>
 
-### A TODO LIST APP IN REACT-NATIVE WITH REACT-NAVIGATION
+### A GITHUB APP IN REACT-NATIVE WITH REACT-NAVIGATION
 
 A mobile app for github ( not special ).
 
